@@ -77,14 +77,16 @@
 //     console.log("show error",err)
 // })
 
-const express =require("express")
-const app =express()
-require("dotenv").config()
+const express = require("express");
+const app = express();
+require("dotenv").config();
 
-app.get("/",(req,res)=>{
-    res.send("this is home route")
-})
+const port = 5000;
 
-app.listen(PORT,()=>{
-    console.log('server is running at port number http://localhost:${PORT}')
-})
+app.get("/", (req, res) => {
+  res.send("this is home route");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running at port number http://localhost:${port}`);
+});
